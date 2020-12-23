@@ -10,17 +10,25 @@
     <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css">
     <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
     <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Material Icon Fonts  -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+
 </head>
 
-<body onload="InitMap()">
+<body >
     <nav>
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center">Recipe Finder</a>
-            <!-- <ul class="left hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Recipe</a></li>
-                <li class="active"><a href="collapsible.html">JavaScript</a></li>
-            </ul> -->
+            <a href="#!" class="brand-logo ">Recipe Finder</a>
+            <form id="searchForm" class='right'>
+                <div class="input-field">
+                  <input id="search" name="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i> Search</label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
         </div>
     </nav>
 
@@ -29,21 +37,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/materialize-css@1.0.0/dist/js/materialize.min.js"></script>
-    <script>
-        function InitMap() {
-            var map = new atlas.Map('myMap', {
-                center: [36.817223 ,-1.286389],
-                zoom: 12,
-                language: 'en-US',
-                authOptions: {
-                    authType: 'subscriptionKey',
-                    subscriptionKey: '5Og9orBviOwprjzLr6PsmIJ50WzziX5ZYKnceLGnWLQ'
-                }
-            });
-        }
-        
-
-    </script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
