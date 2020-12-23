@@ -33,7 +33,6 @@ const searchForm = document
 
 function getSearch() {
   const searchForm = document.getElementById('searchForm');
-  console.log(searchForm);
   searchForm.addEventListener('submit', e =>{
     e.preventDefault()
    
