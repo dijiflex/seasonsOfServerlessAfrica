@@ -1,0 +1,26 @@
+{
+  "name": "seasons-of-serverless-africa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "watch": "parcel watch ./js/index.js --out-dir ./js --out-file main.js",
+    "build": "parcel build ./js/index.js --out-dir ./js --out-file main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dijiflex/seasonsOfServerlessAfrica.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dijiflex/seasonsOfServerlessAfrica/issues"
+  },
+  "homepage": "https://github.com/dijiflex/seasonsOfServerlessAfrica#readme"
+}
