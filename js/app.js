@@ -14,8 +14,8 @@ const addMarkers = async ()=>{
 
 function initMap() {
      map = new atlas.Map('myMap', {
-        center: [36.817223 ,-1.286389],
-        zoom: 12,
+        center: [40.63762902050587, -2.2241166064552074],
+        zoom: 3,
         language: 'en-US',
         authOptions: {
             authType: 'subscriptionKey',
@@ -36,7 +36,7 @@ function initMap() {
         });
     });
 
-    addMarkers();
+    // addMarkers();
     
 }
 const searchForm = document
@@ -48,7 +48,7 @@ export const getSearch = ()=> {
    
     map.setCamera({
     center: [-111.0225, 35.0272],
-    zoom: 12
+    zoom: 3
    
 }, 6000);
   })
