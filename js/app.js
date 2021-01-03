@@ -1,9 +1,10 @@
 
 import axios from 'axios';
+import { async } from 'q';
 
 var map;
 
-async function addMarkers(){
+const addMarkers = async ()=>{
     try {
         const res = await axios.get('https://africarecipefinder.azurewebsites.net/api/recipes');
         console.log(res.status);
@@ -37,7 +38,7 @@ function initMap() {
         });
     });
 
-    
+    addMarkers();
     
 }
 const searchForm = document
