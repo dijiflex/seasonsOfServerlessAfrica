@@ -11,7 +11,7 @@
   },
   "scripts": {
     "watch": "parcel watch ./js/index.js --out-dir ./js --out-file main.js",
-    "prod": "parcel build ./js/index.js --out-dir ./js --out-file main.js"
+    "build": "parcel build ./js/index.js --out-dir ./js --out-file main.js"
   },
   "repository": {
     "type": "git",
