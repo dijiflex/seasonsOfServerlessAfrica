@@ -6,7 +6,6 @@ const addMarkers = async () => {
     let text;
     try {
         const res = await axios.get('http://localhost:7071/api/recipes');
-        console.log(res.data);
         for (let i = 0; i < res.data.length; i++) {
             //Add a marker to the map in which to display a popup for.
             const marker = new atlas.HtmlMarker({
@@ -57,12 +56,12 @@ const addMarkers = async () => {
                 //Open the popup
                 popup.open(map);
             });
-            console.log(res.data[i].id);
+
 
         }
 
     } catch (error) {
-        console.log(error);
+
     }
 
 }
@@ -96,19 +95,30 @@ function initMap() {
 }
 const searchForm = document
 
-// const getSearch = () => {
-//     const searchForm = document.getElementById('searchForm');
-//     searchForm.addEventListener('submit', e => {
-//         e.preventDefault()
+const getSearch = () => {
+    const searchForm = document.getElementById('searchForm');
+    searchForm.addEventListener('submit', async e => {
+        e.preventDefault()
 
-//         map.setCamera({
-//             center: [-111.0225, 35.0272],
-//             zoom: 12
+        const search = searchForm.search.value;
+        let queryUrl = encodeURI(`http://localhost:7071/api/recipes?search=${search}`);
+        try {
+            const res = await axios.get(queryUrl);
+            if (res.data.length > 0) {
+                map.setCamera({
+                    center: res.data[0].geometry.coordinates,
+                    zoom: 14
+                });
+            }
+            
+        } catch (error) {
 
-//         }, 6000);
-//     })
+        }
 
-// }
+    })
+}
+
+getSearch();
 
 
 
