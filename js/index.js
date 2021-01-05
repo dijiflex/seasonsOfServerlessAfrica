@@ -110,6 +110,7 @@ const getSearch = () => {
                     zoom: 14
                 });
             }
+            console.log(res.data[0].geometry.coordinates);
             
         } catch (error) {
 

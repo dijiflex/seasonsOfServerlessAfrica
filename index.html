@@ -55,16 +55,12 @@
                     const data = await fetch(`http://localhost:7071/api/recipes?search=${request.term}`)
                         .then(results => results.json())
                         .then(results => results.map(result => {
-                            return { label: `-${result.localSoupName}` }
+                            return { label: `${result.localSoupName}` }
                         }))
                     cache[term] = data;
                     response(data)
                 },
-                minLength: 2,
-                select: function (event, ui) {
-    
-                    window.location.href = `/ad/${ui.item.value}`;
-                }
+                minLength: 2
             })
         })
     </script>
